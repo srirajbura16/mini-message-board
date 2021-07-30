@@ -5,7 +5,7 @@ block content
   a(href="/new") Add new message
   each msg in messages
     div
-      p= msg.user
       p= msg.added
+      b= msg.user
       p= msg.text
     hr

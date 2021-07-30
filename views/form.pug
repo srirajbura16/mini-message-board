@@ -4,9 +4,9 @@ block content
   h1 Add new message 
   form(method="POST" action="/new")
     p Name 
-    input(type="text" name="messageUser")
+    input(type="text" name="messageUser" required)
     p Message
-    input(type="text" name="messageText")
+    input(type="text" name="messageText" required)
     //- textarea
     br
     br
