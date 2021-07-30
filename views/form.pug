@@ -2,11 +2,11 @@ extends layout
 
 block content
   h1 Add new message 
-  form(action="/new_movie" method="POST")
+  form(method="POST" action="/new")
     p Name 
-    input(type="text" name="title" placeholder="")
+    input(type="text" name="messageUser")
     p Message
-    input(type="text" name="year" placeholder="")
+    input(type="text" name="messageText")
     //- textarea
     br
     br

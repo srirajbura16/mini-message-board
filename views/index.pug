@@ -2,8 +2,10 @@ extends layout
 
 block content
   h1= title
+  a(href="/new") Add new message
   each msg in messages
     div
-      p= msg.text
       p= msg.user
       p= msg.added
+      p= msg.text
+    hr
