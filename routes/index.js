@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express.Router();
+var formatDistanceToNow = require('date-fns/formatDistanceToNow');
 
 const messages = [
   {
     text: 'We are going to be free!',
     user: 'Dutch',
-    added: new Date(),
+    added: formatDistanceToNow(new Date(2021, 7, 8), { addSuffix: true }),
   },
   {
     text: 'Yes, we are Dutch!',
     user: 'Bill',
-    added: new Date(),
+    added: formatDistanceToNow(new Date(2021, 7, 12), { addSuffix: true }),
   },
 ];
 
@@ -34,7 +35,7 @@ router.post('/new', function (req, res, next) {
   messages.push({
     text: messageText,
     user: messageUser,
-    added: new Date(),
+    added: formatDistanceToNow(new Date(), { addSuffix: true }),
   });
 
   res.redirect('/');
